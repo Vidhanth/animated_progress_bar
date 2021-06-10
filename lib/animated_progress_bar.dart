@@ -14,7 +14,7 @@ class AnimatedProgressBar extends StatelessWidget {
   final bool centered;
 
   const AnimatedProgressBar({
-    Key key,
+    Key? key,
     this.width = 200,
     this.height = 2,
     this.radius = BorderRadius.zero,
@@ -22,7 +22,7 @@ class AnimatedProgressBar extends StatelessWidget {
     this.progressColor = Colors.white,
     this.duration = const Duration(milliseconds: 700),
     this.centered = false,
-    @required this.value,
+    required this.value,
     this.curve = Curves.fastOutSlowIn,
   }) : assert(value >= 0 && value <= 1), super(key: key);
 
